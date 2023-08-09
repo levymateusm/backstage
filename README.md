@@ -298,6 +298,15 @@ metadata:
           number: 80
 ```
 
+Alterar app-config.yaml e adicionar `upgrade-insecure-requests: false`
+
+```yaml
+# app-config.yaml
+backend:
+  csp:
+    upgrade-insecure-requests: false
+```
+
 ```shell
 $ kubectl apply -f kubernetes/backstage-ingress.yaml
 ingress.networking.k8s.io/backstage-ingress created
